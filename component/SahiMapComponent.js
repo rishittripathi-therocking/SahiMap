@@ -18,7 +18,7 @@ class SahiMap extends React.Component {
                 <Text style={{ textAlign: 'center', margin: 10, color: '#514DA8', fontWeight: 'bold' }}>Search Places And Mark Them on Map</Text>
 
                 <View style={styles.input}>
-                    <Input placeholder="Enter a Place to Mark on Map" style={{ height: 40, width: 200}} onChangeText={(place) => this.setState({place})} value={this.state.place} ></Input>
+                    <Input leftIcon={{ type: 'font-awesome', name: 'map-marker' }} placeholder="Enter a Place to Mark on Map" onChangeText={(place) => this.setState({place})} value={this.state.place} ></Input>
                 </View>
                 <View style={styles.buttons}>
                     <Button title="Search" 
