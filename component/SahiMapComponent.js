@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {  Text, ScrollView,View,StyleSheet, Dimensions} from 'react-native';
 import { Button, Input,Icon} from 'react-native-elements';
-import MapView from 'react-native-maps';
+import MapView, { Marker } from 'react-native-maps';
 
 
 class SahiMap extends React.Component {
@@ -12,8 +12,8 @@ class SahiMap extends React.Component {
         }
     }
 
-
     render() {
+        
         return(
             <ScrollView style={{flex:1, paddingTop: Platform.OS === 'ios' ? 0 : Expo.Constants.statusBarHeight }}>
                 <Text style={{ textAlign: 'center', margin: 10, color: '#514DA8', fontWeight: 'bold' }}>Search Places And Mark Them on Map</Text>
@@ -40,7 +40,9 @@ class SahiMap extends React.Component {
                             latitudeDelta: 0.05,
                             longitudeDelta: 0.05
                         }}
-                        ></MapView>
+                        >
+                            <Marker coordinate={{latitude: 22.5726, longitude:88.3639}}></Marker>
+                        </MapView>
                 </View>
             </ScrollView>
         );
