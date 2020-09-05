@@ -1,12 +1,19 @@
 import React from 'react';
-import {  ScrollView, Text} from 'react-native';
+import SahiMap from './SahiMapComponent';
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
+const Stack = createStackNavigator();
 
 class Main extends React.Component {
     render() {
         return(
-            <ScrollView style={{flex:1, paddingTop: Platform.OS === 'ios' ? 0 : Expo.Constants.statusBarHeight }}>
-                <Text >Hello World</Text>
-            </ScrollView>
+            <NavigationContainer>
+                <Stack.Navigator>
+                    <Stack.Screen 
+                        name="SahiMap" 
+                        component={SahiMap}/>
+                </Stack.Navigator>
+            </NavigationContainer>
         );
     }
 }
