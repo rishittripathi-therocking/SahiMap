@@ -1,5 +1,6 @@
 import React from 'react';
-import {  Text, ScrollView, TextInput,View,Button,StyleSheet} from 'react-native';
+import {  Text, ScrollView,View,StyleSheet} from 'react-native';
+import { Button, Input,Icon} from 'react-native-elements';
 
 
 class SahiMap extends React.Component {
@@ -9,16 +10,27 @@ class SahiMap extends React.Component {
             place:'',
         }
     }
+
+
     render() {
         return(
             <ScrollView style={{flex:1, paddingTop: Platform.OS === 'ios' ? 0 : Expo.Constants.statusBarHeight }}>
                 <Text style={{ textAlign: 'center', margin: 10, color: '#514DA8', fontWeight: 'bold' }}>Search Places And Mark Them on Map</Text>
 
                 <View style={styles.input}>
-                    <TextInput placeholder="Enter a Place to Mark on Map" style={{ height: 40, width: 200}} value={this.state.place} onChange={this._onChangeHandler}></TextInput>
+                    <Input placeholder="Enter a Place to Mark on Map" style={{ height: 40, width: 200}} onChangeText={(place) => this.setState({place})} value={this.state.place} ></Input>
                 </View>
                 <View style={styles.buttons}>
-                    <Button title="Search" buttonStyle={{ backgroundColor: '#f4511e'}}></Button> 
+                    <Button title="Search" 
+                        icon={
+                            <Icon
+                                name='search'
+                                type='font-awesome'            
+                                size={24}
+                                color= 'white'
+                            />
+                        }
+                        buttonStyle={{ backgroundColor: '#f4511e'}}></Button> 
                 </View>
             </ScrollView>
         );
