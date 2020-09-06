@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add react-native-vector-icon
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add react-native-google-places-autocomplete
 
 PATH: 
   C:\oraclexe\app\oracle\product\11.2.0\server\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Brackets\command;C:\ProgramData\chocolatey\bin;C:\Program Files\MATLAB\R2019b\bin;C:\Program Files\Git\cmd;C:\Users\Rishit\AppData\Local\Programs\Python\Python27\Scripts\;D:\Vagrant\bin;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\nodejs\;%Rishit%\AppData\Roaming\npm;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;C:\ProgramData\Anaconda3;C:\Program Files\MongoDB\Server\4.4\bin\;C:\Users\Rishit\AppData\Local\Programs\Python\Python38\Scripts\;C:\Users\Rishit\AppData\Local\Programs\Python\Python38\;C:\Users\Rishit\AppData\Local\Programs\Python\Python38-32\Scripts\;C:\Users\Rishit\AppData\Local\Programs\Python\Python38-32\;C:\Users\Rishit\AppData\Local\Programs\Python\Python37\Scripts\;C:\Users\Rishit\AppData\Local\Programs\Python\Python37\;C:\Users\Rishit\AppData\Local\Microsoft\WindowsApps;C:\Users\Rishit\AppData\Local\hyper\app-2.0.0\resources\bin;C:\Users\Rishit\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Rishit\AppData\Local\Programs\Fiddler;C:\Program Files (x86)\Google\google_appengine\;C:\Users\Rishit\AppData\Local\Google\Cloud SDK\google-cloud-sdk\bin;C:\Users\Rishit\AppData\Local\Programs\Python\Python27\Scripts\;C:\Users\Rishit\AppData\Local\Yarn\bin;C:\Users\Rishit\AppData\Roaming\npm;C:\Program Files\MongoDB\Server\4.4\bin\;
@@ -14,17 +14,8 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/react-native-vector-icon: Not found
-      at Request.params.callback [as _callback] (C:\Program Files (x86)\Yarn\lib\cli.js:66096:18)
-      at Request.self.callback (C:\Program Files (x86)\Yarn\lib\cli.js:140748:22)
-      at Request.emit (events.js:315:20)
-      at Request.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141720:10)
-      at Request.emit (events.js:315:20)
-      at IncomingMessage.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141642:12)
-      at Object.onceWrapper (events.js:421:28)
-      at IncomingMessage.emit (events.js:327:22)
-      at endReadableNT (_stream_readable.js:1221:12)
-      at processTicksAndRejections (internal/process/task_queues.js:84:21)
+  Error: getaddrinfo ENOTFOUND registry.yarnpkg.com
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:66:26)
 
 npm manifest: 
   {
@@ -48,8 +39,10 @@ npm manifest:
       "react-native": "https://github.com/expo/react-native/archive/sdk-38.0.2.tar.gz",
       "react-native-elements": "^2.3.2",
       "react-native-gesture-handler": "1.6.0",
+      "react-native-maps": "^0.27.1",
       "react-native-safe-area-context": "3.0.7",
       "react-native-screens": "2.9.0",
+      "react-native-vector-icons": "^7.0.0",
       "react-native-web": "~0.11.7",
       "react-navigation": "^4.4.0",
       "react-navigation-stack": "^2.8.2"
@@ -4690,6 +4683,11 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/react-native-iphone-x-helper/-/react-native-iphone-x-helper-1.2.1.tgz#645e2ffbbb49e80844bb4cbbe34a126fda1e6772"
     integrity sha512-/VbpIEp8tSNNHIvstuA3Swx610whci1Zpc9mqNkqn14DkMbw+ORviln2u0XyHG1kPvvwTNGZY6QpeFwxYaSdbQ==
   
+  react-native-maps@^0.27.1:
+    version "0.27.1"
+    resolved "https://registry.yarnpkg.com/react-native-maps/-/react-native-maps-0.27.1.tgz#2f10cd417bb2fd938c9e015b1c9b6d9b1a44b97f"
+    integrity sha512-HygBkZBecTnIVRYrSiLRAvu4OmXOYso/A7c6Cy73HkOh9CgGV8Ap5eBea24tvmFGptjj5Hg8AJ94/YbmWK1Okw==
+  
   react-native-ratings@^7.2.0:
     version "7.3.0"
     resolved "https://registry.yarnpkg.com/react-native-ratings/-/react-native-ratings-7.3.0.tgz#32e11e4ed944ba8adbbc995d601df3f131619b6f"
@@ -4719,6 +4717,15 @@ Lockfile:
     version "2.5.0"
     resolved "https://registry.yarnpkg.com/react-native-status-bar-height/-/react-native-status-bar-height-2.5.0.tgz#bc0fb85230603850aab9667ee8111a62954de90c"
     integrity sha512-sYBCPYA/NapBSHkdm/IVL4ID3LLlIuLqINi2FBDyMkc2BU9pfSGOtkz9yfxoK39mYJuTrlTOQ7mManARUsYDSA==
+  
+  react-native-vector-icons@^7.0.0:
+    version "7.0.0"
+    resolved "https://registry.yarnpkg.com/react-native-vector-icons/-/react-native-vector-icons-7.0.0.tgz#5b92ed363c867645daad48c559e1f99efcfbb813"
+    integrity sha512-Ku8+dTUAnR9pexRPQqsUcQEZlxEpFZsIy8iOFqVL/3mrUyncZJHtqJyx2cUOmltZIC6W2GI4IkD3EYzPerXV5g==
+    dependencies:
+      lodash "^4.17.15"
+      prop-types "^15.7.2"
+      yargs "^15.0.2"
   
   react-native-web@~0.11.7:
     version "0.11.7"
@@ -5894,7 +5901,7 @@ Lockfile:
       y18n "^4.0.0"
       yargs-parser "^15.0.1"
   
-  yargs@^15.1.0:
+  yargs@^15.0.2, yargs@^15.1.0:
     version "15.4.1"
     resolved "https://registry.yarnpkg.com/yargs/-/yargs-15.4.1.tgz#0d87a16de01aee9d8bec2bfbf74f67851730f4f8"
     integrity sha512-aePbxDmcYW++PaqBsJ+HYUFwCdv4LVvdnhBy78E57PIor8/OVvhMrADFFEDh8DHDFRv/O9i3lPhsENjO7QX0+A==
