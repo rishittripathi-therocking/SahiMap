@@ -19,14 +19,14 @@
     "ios": {
       "supportsTablet": true,
       "config": {
-        "googleMapsApiKey":"AIzaSyD1zuWwsb1oiiRr_HDmMPyXm48WetRKDOw"
+        "googleMapsApiKey":"Your API Key"
       }
     },
     "android": {
       "package":"com.sahimap.location",
       "config": {
         "googleMaps": {
-          "apiKey":"AIzaSyD1zuWwsb1oiiRr_HDmMPyXm48WetRKDOw"
+          "apiKey":"Your API key"
         }
       }
     },
