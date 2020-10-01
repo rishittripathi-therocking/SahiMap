@@ -5,6 +5,7 @@ import * as Permissions from 'expo-permissions';
 import * as Location from 'expo-location';
 
 class SahiMap extends React.Component {
+    _isMounted = false;
     constructor(props) {
         super(props);
         this.state = {
@@ -16,15 +17,18 @@ class SahiMap extends React.Component {
     }
     
     componentDidMount() {
+        this._isMounted = true;
         this.functionLocationAsync();
     }
 
     functionLocation = () => {
         let watchId = navigator.geolocation.watchPosition((pos) => {
-            this.setState({
-                latitude: pos.coords.latitude,
-                longitude: pos.coords.longitude
-            });
+            if(this._isMounted){
+                this.setState({
+                    latitude: pos.coords.latitude,
+                    longitude: pos.coords.longitude
+                });
+            }
         },(error) => {
 
             alert(error.message);
@@ -32,7 +36,9 @@ class SahiMap extends React.Component {
         {enableHighAccuracy: true,timeout: 20000,maximumAge: 1000}
         )
     }
-
+    componentWillUnmount() {
+        this_isMounted = false;
+    }
     functionLocationAsync =async() => {
         let {status} = await Permissions.askAsync(Permissions.LOCATION);
         if( status !== 'granted') {
