@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScrollView,  Text, View,StyleSheet, Dimensions} from 'react-native';
+import { ScrollView,  Text, View,StyleSheet, Dimensions, TextInput} from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
 import * as Permissions from 'expo-permissions';
 import * as Location from 'expo-location';
@@ -63,7 +63,7 @@ class SahiMap extends React.Component {
         }
         return(
             <React.Fragment>
-                <View style={{margin: 10, alignItems: 'center', justifyContent: 'center'}}>
+                <View style={{margin: 10, alignItems: 'center', justifyContent: 'center', backgroundColor: 'white'}}>
                     <TextInput placeholder='From' style={{backgroundColor: 'white', width: 300, padding: 5, borderWidth: 0.3, borderRadius: 10, borderColor: 'silver'}}></TextInput>
                     <TextInput placeholder='To' style={{backgroundColor: 'white', width: 300, padding: 5, borderWidth: 0.3, borderRadius: 10, borderColor: 'silver', marginTop: 10}}></TextInput>
                 </View>
