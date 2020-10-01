@@ -1,0 +1,27 @@
+# SahiMap
+It is Project for getting your phones location and marking it on Map 
+Dependencies used for the Project are
+    "@react-native-community/masked-view": "0.1.10",
+    "@react-navigation/native": "^5.7.3",
+    "@react-navigation/stack": "^5.9.0",
+    "expo": "~38.0.8",
+    "expo-cli": "^3.26.2",
+    "expo-location": "8.2.1",
+    "expo-permissions": "9.0.1",
+    "expo-status-bar": "^1.0.2",
+    "font-awesome": "^4.7.0",
+    "prop-types": "^15.6.2",
+    "react": "~16.11.0",
+    "react-dom": "~16.11.0",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-38.0.2.tar.gz",
+    "react-native-elements": "^2.3.2",
+    "react-native-gesture-handler": "1.6.0",
+    "react-native-google-places-autocomplete": "^1.8.1",
+    "react-native-maps": "^0.27.1",
+    "react-native-places-input": "^1.1.7",
+    "react-native-safe-area-context": "3.0.7",
+    "react-native-screens": "2.9.0",
+    "react-native-vector-icons": "^7.0.0",
+    "react-native-web": "~0.11.7",
+    "react-navigation": "^4.4.0",
+    "react-navigation-stack": "^2.8.2"
