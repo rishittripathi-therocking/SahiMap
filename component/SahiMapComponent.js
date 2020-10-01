@@ -63,8 +63,10 @@ class SahiMap extends React.Component {
         }
         return(
             <React.Fragment>
-                <Text style={{ textAlign: 'center', margin: 10, color: '#514DA8', fontWeight: 'bold' }}>Get Your Current Location And Mark Them on Map</Text>
-                <Text style={{ textAlign: 'center', margin: 10, color: '#514DA8', fontWeight: 'bold' }}> Your Location is {this.state.latitude}, {this.state.longitude}</Text>
+                <View style={{margin: 10, alignItems: 'center', justifyContent: 'center'}}>
+                    <TextInput placeholder='From' style={{backgroundColor: 'white', width: 300, padding: 5, borderWidth: 0.3, borderRadius: 10, borderColor: 'silver'}}></TextInput>
+                    <TextInput placeholder='To' style={{backgroundColor: 'white', width: 300, padding: 5, borderWidth: 0.3, borderRadius: 10, borderColor: 'silver', marginTop: 10}}></TextInput>
+                </View>
                 <ScrollView style={{flex:1, paddingTop: Platform.OS === 'ios' ? 0 : Expo.Constants.statusBarHeight }}>
                     <View style={styles.container}>
                         <MapView style={styles.mapview}
@@ -94,7 +96,7 @@ const styles = StyleSheet.create({
     },
     mapview: {
         width: Dimensions.get('window').width,
-        height: 480,
+        height: 460,
         
     }
 });
